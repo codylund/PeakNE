@@ -2,7 +2,7 @@
     <agm-marker *ngFor="let mountain of mountains" 
         [latitude]="mountain.lat" 
         [longitude]="mountain.lng"
-        [iconUrl]="'/assets/img/mountain.svg'">
+        [iconUrl]="'./assets/img/mountain.svg'">
         <agm-snazzy-info-window [maxWidth]="400" [closeWhenOthersOpen]="true">
             <ng-template>
                 <div class="info-window-heading">
