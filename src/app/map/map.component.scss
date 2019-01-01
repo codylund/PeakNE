@@ -1,0 +1,42 @@
+@import '../app.component.scss'; // get global variables and mix-ins
+
+agm-map {
+    width: 100%;
+    
+    h1 {
+        font-family: $font-title;
+        font-size: 14pt;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    h2 {
+        font-family: $font-global;
+        font-size: 10pt;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info-window-heading {
+        margin-bottom: 8pt;
+        margin-top: 8pt;
+    }
+
+    .info-window-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8pt;
+        margin-top: 8pt;
+
+        * {
+            padding-right: 8pt;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+}

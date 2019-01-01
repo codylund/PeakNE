@@ -1,0 +1,28 @@
+body {
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-root {
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+app-welcome {
+    flex-grow: 1;
+    background-image: url('./assets/img/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+}
+
+app-map {
+    flex-grow: 1;
+}

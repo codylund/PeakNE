@@ -1,0 +1,21 @@
+<agm-map [style.height.px]="height" [latitude]="centerLat" [longitude]="centerLng">
+    <agm-marker *ngFor="let mountain of mountains" 
+        [latitude]="mountain.lat" 
+        [longitude]="mountain.lng"
+        [iconUrl]="'/assets/img/mountain.svg'">
+        <agm-snazzy-info-window [maxWidth]="400" [closeWhenOthersOpen]="true">
+            <ng-template>
+                <div class="info-window-heading">
+                    <h1>{{ mountain.name }}</h1>
+                    <h2>in {{ mountain.city }}, {{ mountain.state}}</h2>
+                </div>
+                <span class="info-window-stats">
+                    <span [inlineSVG]="'/assets/img/trails.svg'"></span>
+                    <h2>{{ mountain.totalRuns }}</h2>
+                    <span [inlineSVG]="'/assets/img/lift.svg'"></span>
+                    <h2>{{ mountain.totalLifts }}</h2>
+                </span>
+            </ng-template>
+        </agm-snazzy-info-window>
+    </agm-marker>
+</agm-map>

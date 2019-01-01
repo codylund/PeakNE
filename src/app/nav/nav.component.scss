@@ -1,0 +1,59 @@
+@import '../app.component.scss'; // get global mix-ins
+
+$nav-bar-color:       #000000;
+$nav-bar-color-hover: #202020;
+$nav-bar-font-color:  #ffffff;
+
+// Navigation bar container
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;    
+    overflow: scroll;
+    width: 100%;
+    background-color: $nav-bar-color;
+
+    // All navigation bar items
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 14pt 16pt;
+        background-color: $nav-bar-color;
+        font-family: $font-global;
+        color: $nav-bar-font-color;
+
+        &.logo {
+            color: $color-accent;
+            font-family: $font-title;
+            font-size: 18pt;
+        }
+
+        // Selectable navigation bar items
+        &.nav {
+            @include disable-hightlight;
+            
+            font-weight: bold;
+            font-size: 12pt;
+
+            // Display icon and text using flexbox so
+            // they can be vertically centered.
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $nav-bar-color-hover;
+            }
+
+            .nav-icon {
+                fill: white;
+                font-size: 0;
+                // add spacing after the icon for text description
+                margin-right: 8pt;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import '../app.component.scss'; // get global mix-ins
+
+#table-mountains {
+    $unselected-property-color: #484848;
+    $hover-property-color: #303030;
+    $selected-property-color: black;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    white-space: nowrap;
+
+    th {
+        padding: 14pt 14pt;
+        cursor: pointer;
+        font-size: 12pt;
+        font-family: $font-global;
+        font-weight: normal;
+        color: $unselected-property-color;
+
+        text-align: left;
+
+        &:hover {
+            color: $hover-property-color;
+        }
+
+        .fa-caret-up {
+
+            transform-origin: center center;
+            transition: transform 0.1s linear;
+
+            &.down {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    tr {
+        &:hover {
+            cursor: pointer;
+            background-color: #f8f8f8;
+        }
+        td {
+            padding: 10pt 14pt;
+            font-size: 12pt;
+            font-family: $font-global;
+            text-align: left;
+        }
+    }
+
+    .selected {
+        color: $selected-property-color;
+
+        &:after {
+    
+            color: black;
+            font-size: 8pt;
+    
+            .ascending {
+                content: '▲';
+            }
+        
+            .descending {
+                content: '▼';
+            }
+        }
+    }
+}
+

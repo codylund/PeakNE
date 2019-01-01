@@ -1,0 +1,21 @@
+<div class="container">
+  <table id="table-mountains">
+    <!-- Print row of labels for each mountain property -->
+    <thead>
+      <th *ngFor="let mountainProperty of mountainProperties"
+          (click)="sortMountains(mountainProperty)"
+          [class.selected]="isSelected(mountainProperty)">
+        {{ getMountainPropertyLabel(mountainProperty) }}
+        <i class="fas fa-caret-up" 
+        [class.down]="!sortAscending"
+        [style.visibility]="isSelected(mountainProperty) ? 'visible' : 'hidden'"></i>
+      </th>
+    </thead>
+    <!-- For each mountain, print row of mountain properties. -->
+    <tr *ngFor="let mountain of mountains">
+      <td *ngFor="let property of mountainProperties">
+        {{ getMountainPropertyValue(mountain, property) }}
+      </td>
+    </tr>
+  </table>
+</div>
