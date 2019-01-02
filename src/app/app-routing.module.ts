@@ -8,6 +8,10 @@ import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: WelcomeComponent
+  },
+  {
     path: 'list', 
     component: ListComponent 
   },
