@@ -1,4 +1,7 @@
-# Site
+# Peak NE
+
+Peak NE is a simple catalog of New England's most esteemed ski resorts created using Angular 2. 
+View the site live on GitHub pages [here](https://codylund.github.io/PeakNE/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
@@ -21,6 +24,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Deploy to GitHub Pages
+
+This project is served via GitHub Pages from the `doc/` directory.  Run the following commands to update the
+live site with the latest changes:
+```ng build --prod --output-path docs --base-href "/PeakNE/"```
+```cp docs/index.html docs/404.html```
 
 ## Further help
 
